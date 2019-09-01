@@ -1,6 +1,6 @@
 # LightWeight_Binary_CNN_and_ELM_Keras
 
-Three notebooks are stored in this repositoy, related to the following paper:
+Three notebooks are stored in this repository, related to the following paper:
 
 [1] Radu Dogaru and Ioana Dogaru, "BCONV-ELM: Binary Weights Convolutional Neural Network Simulator based on Keras/Tensorflow, for Low Complexity Implementations", Proceedings of the ISEEE 2019 conference, submitted. 
 
@@ -12,12 +12,12 @@ a Python environment with TENSORFLOW, KERAS, NUMPY installed):
 1) BCONV_ELM  - allows the design of a lightweight CNN with 2 convolutional+pooling layers. 
 The optimization of the binary kernels is done while maximizing the accuracy of an extreme learning 
 machine (used here for its fast learning). After that, a linear (optionally up to 2 hidden layers may be added) 
-perceptron network (for reduced complexity) is trained. The resulting model is well suited for 
-hardware orineted implementations (e.g. FPGA, microcontrollers etc.) 
+perceptron network (for reduced complexity) is trained at the output of the convolutional expander. 
+The resulting model is well suited for hardware orineted implementations (e.g. FPGA, microcontrollers etc.) 
 
 2) ELM_Keras: a convenient implementation of the Extreme Learning Machine including the case with no hidden layer and 
-quantization of weights for resource-constrained platforms). This cell is extracted from the above and can be 
-used independently on any desired dataset. Since it supports GPU very fast learning (under one minute) is achieved 
+quantization of weights for resource-constrained platforms). This cell is extracted from the above notebook and to be 
+used independently on any desired dataset. Since it supports GPU, very fast learning (under one minute) is achieved 
 for medium sized datasest. It is not recommended for very big data since it requires a lot of RAM on the device. 
 
 3) L-CNN:  the trainable version of the BCONV-ELM: it trains standard Keras/Tensorflow models for 
